@@ -5,7 +5,7 @@ import Colors from "./components/Colors";
 function App() {
   return (
     <div>
-      <section>
+      <section className="px-5 sm:px-8 py-5 sm:py-8">
         <Form />
         <Colors />
       </section>

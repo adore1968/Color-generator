@@ -5,12 +5,12 @@ const AppContext = createContext();
 
 export function AppContextProvider({ children }) {
   const [formText, setFormText] = useState("");
-  const [colors, setColors] = useState(new Values("#ff2025").all(10));
+  const [colors, setColors] = useState(new Values("#ff2025").all(5));
 
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      const newColors = new Values(formText).all(10);
+      const newColors = new Values(formText).all(5);
       setColors(newColors);
     } catch (error) {
       console.log(error);

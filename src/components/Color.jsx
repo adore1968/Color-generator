@@ -20,12 +20,14 @@ function Color({ item, index }) {
   return (
     <div
       style={{ backgroundColor: `rgb(${rgb})` }}
-      className={`${index > 10 ? "text-white" : "text-black"}`}
+      className={`${
+        index > 10 ? "text-white" : "text-black"
+      } container w-1/4 p-5 m-1 rounded text-lg sm:text-xl shadow`}
       onClick={copyColor}
     >
-      <h2>%{item.weight}</h2>
-      <h3>{item.hex}</h3>
-      {showCopy ? <p>Copy to clipboard</p> : null}
+      <h2 className="mb-1">%{item.weight}</h2>
+      <h3>#{item.hex}</h3>
+      {showCopy ? <p className="uppercase mt-1">Copy to clipboard</p> : null}
     </div>
   );
 }
